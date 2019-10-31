@@ -1,25 +1,22 @@
-/* Guess Validator Function: Merit Badge 2
- * Adds counting turns, quit with q, and validating guess
- * By Mr. M. 
+/* Guess Game:Preity 
  */
 
-/* Global Variables */
 // Declare var answer as random integer between 1 and 100.
-
-// Alert the answer while testing.
-console.log(answer);
+var answer = Math.floor(Math.random()*100)+1;
+// alert the answer while testing.
+alert(answer);
 // Declare var guess, set to 0.
 var guess = 0;
-/* Main Code */
 // Define while loop that runs while guess is not equal to answer
-while (guess != answer){
+while(guess !=answer){
   	// Prompt user for guess.
-	guess=prompt("Guess my number (1-100)");
-		// If guess lower than answer, say too low. 
-		if (guess<answer) alert("too low");
-		// Otherwise, if guess greater than answer, say too high. 
-		else if (guess>answer) alert("too high");
-	// Close While Loop block
+    guess=prompt("Guess Preity's number");
+  	/* Add conditionals that give feedback on values:  if / else if */
+  	// If guess less than answer, say too low. 
+    if(guess<answer) alert("too low");
+  	// If guess more than answer, say too high. 
+    if(guess>answer) alert("too high");
+  // Close While Loop Brackets
 }
-// If they guessed it, tell them they got it in however many turns. 
-if (guess == answer) alert("You got it in "+turns+" turns.");
+// Alert that they got it. 
+alert("You got it!");
