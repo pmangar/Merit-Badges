@@ -10,8 +10,6 @@
 console.log(answer);
 // Declare var guess, set to 0.
 var guess = 0;
-
-
 /* Main Code */
 // Define while loop that runs while guess is not equal to answer
 while (guess != answer){
@@ -22,11 +20,7 @@ while (guess != answer){
 		if (guess<answer) alert("too low");
 		// Otherwise, if guess greater than answer, say too high. 
 		else if (guess>answer) alert("too high");
-	// Close If block
-	}
-
 	// Close While Loop block
 }
 // If they guessed it, tell them they got it in however many turns. 
 if (guess == answer) alert("You got it in "+turns+" turns.");
-
