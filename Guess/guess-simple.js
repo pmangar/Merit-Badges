@@ -15,7 +15,6 @@ var guess = 0;
 while (guess != answer){
   	// Prompt user for guess.
 	guess=prompt("Guess my number (1-100)");
-
 		// If guess lower than answer, say too low. 
 		if (guess<answer) alert("too low");
 		// Otherwise, if guess greater than answer, say too high. 
