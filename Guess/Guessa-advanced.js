@@ -13,14 +13,13 @@ while (guess != answer){
 	if (validator(guess) ==true){
 	turns++;
 		if (guess<answer) alert("too low"); 
-		else if (guess>answer) alert("too high");
-		else if (guess == answer) {
-			gameStats(turns, totalTurns);
-			again = newGame();
-		}
+		else if (guess>answer) alert("too high");	
+	}
         else alert("Invalid guess. Retry!");
     }
 }
+if (guess == answer) alert("You got it in "+turns+" turns.");
+else alert("Quitter!");
 
 function validator (guess){
 	if (guess > 0 && guess < 101){
