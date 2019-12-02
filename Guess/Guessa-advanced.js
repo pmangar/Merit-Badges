@@ -14,8 +14,10 @@ while (guess != answer){
 	turns++;
 		if (guess<answer) alert("too low"); 
 		else if (guess>answer) alert("too high");
-	}	
-
+		else if (guess == answer) {
+			gameStats(turns, totalTurns);
+			again = newGame();
+		}
         else alert("Invalid guess. Retry!");
     }
 }
