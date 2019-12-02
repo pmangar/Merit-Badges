@@ -44,7 +44,7 @@ while (again == true) {
 	function gameStats(turns) {
 		alert("you guessed it in"+turns+" turns");
 		totalTurns += turns;
-		averageTurns = totalTurns / games;
+		averageTurns = totalTurns / game;
 		alert("you won"+game+" games with an average of" +averageTurns+" turns per game!");
 	}
 	function newGame() {
