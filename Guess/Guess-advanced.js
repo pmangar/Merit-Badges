@@ -14,7 +14,8 @@ while (again == true) {
 	while (guess != answer){
 		guess=prompt("Guess my number (1-100)");
 		if (guess =="q") {
-		break;
+			alert("quitter!");
+			break;
 	}		
 	if(validator(guess) == true){
 		turns++;
