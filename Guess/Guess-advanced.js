@@ -48,9 +48,11 @@ function gameStats(turns, totalTurns){
 }
 function newGame() {
 	again = confrim("Play again?");
-	if (again == "y") return true; 
-    else {
+	if (again == false) {
 		alert("thanks for playing.");
 		return false;
-	    }
+	} else if (again == true) {
+		return true; 
+	}
 }
+ 
