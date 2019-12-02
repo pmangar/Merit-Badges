@@ -40,19 +40,20 @@ function validator (guess){
 		return false; 
 	}
 }
-function gameStats(turns, totalTurns){
-	alert("you got it in"+turns+" turns");
+function gameStats(turns) {
+	alert("you guessed it in"+turns+" turns");
 	totalTurns += turns;
 	averageTurns = totalTurns / games;
 	alert("you won"+game+" games with an average of" +averageTurns+" turns per game!");
 }
 function newGame() {
-	again = confrim("Play again?");
-	if (again == false) {
-		alert("thanks for playing.");
-		return false;
-	} else if (again == true) {
-		return true; 
+		again = confirm("play again?");
+		if (again == false) {
+			alert("thanks for playing!");
+			return false;
+		} else if (again == true) {
+			return true;
+		}
 	}
 }
  
