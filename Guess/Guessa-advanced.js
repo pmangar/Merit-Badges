@@ -16,20 +16,24 @@ while (guess != answer){
 		else if (guess>answer) alert("too high");
 	}	
 
-else alert("Invalid guess. Retry!");
+        else alert("Invalid guess. Retry!");
+    }
 }
-if (guess == answer) alert("You got it in "+turns+" turns.");
-else alert("Quitter!");
-	function validator (guess){
-	if (guess > 0 && guess < 101) return true;
-	else return false; 
+
+function validator (guess){
+	if (guess > 0 && guess < 101){
+	    return true;
 	}
+	else return false; 
+}
+
 function gameStats(turns, totalTurns){
 	alert("you got it in "+turns+" turns");
 	totalTurns += turns;
 	averageTurns = totalTurns / games;
 	alert("you won "+games+" games with an average of " +averageTurns+" turns per game!");
 }
+
 function newGame(){
 	var again = prompt("Play again? y = yes.");
         if (again == "y") {
