@@ -25,16 +25,16 @@ else alert("Quitter!");
 	else return false; 
 	}
 function gameStats(turns, totalTurns){
-	alert("you got it in"+turns+" turns");
+	alert("you got it in "+turns+" turns");
 	totalTurns += turns;
 	averageTurns = totalTurns / games;
-	alert("you won"+games+" games with an average of" +averageTurns+" turns per game!");
+	alert("you won "+games+" games with an average of " +averageTurns+" turns per game!");
 }
-function newGame() {
-	var again = prompt ("Play again? y = yes");
+function newGame(){
+	var again = prompt("Play again? y = yes");
     if (again == "y") return true; 
     else {
-		alert("Sorry to see you go.");
+      alert("Sorry to see you go.");
 		return false;
 	    }
 }
