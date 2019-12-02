@@ -5,39 +5,50 @@
 var game = 0;
 var again = true;
 var totalTurns = 0;
-    var guess = 0;
+while (again == true) {
+	var guess = 0;
 	var turns = 0;
 	game++;
-var answer = Math.floor(Math.random()*100)+1;
-console.log(answer);
-while (guess != answer){
-	guess=prompt("Guess my number (1-100)");
-    if (guess =="q") {
+	var answer = Math.floor(Math.random()*100)+1;
+	console.log(answer);
+	while (guess != answer){
+		guess=prompt("Guess my number (1-100)");
+		if (guess =="q") {
 		break;
+	}		
 	if(validator(guess) == true){
-	turns++;
-		if (guess<answer) alert("too low"); 
-		else if (guess>answer) alert("too high");
-	}	
-	turns++;
-else alert("Invalid guess. Retry!");
+		turns++;
+		if (guess < answer) {
+			alert("too low"); 
+		} else if (guess > answer) {
+			alert("too high");
+		}
+	} else if (validator(guess) == false) {
+		alert ("Invalid guess!");
 }
-if (guess == answer) alert("You got it in "+turns+" turns.");
-else alert("Quitter!");
-
+if (guess == answer) {
+	gameStats(turns);
+	again = newGame();
+} else {
+	break;
+}
+			
 function validator (guess){
-	if (guess > 0 && guess < 101) return true;
-	else return false; 
+	if (guess > 0 && guess < 101) {
+		return true;
+	} else { 
+		return false; 
 	}
+}
 function gameStats(turns, totalTurns){
 	alert("you got it in"+turns+" turns");
 	totalTurns += turns;
 	averageTurns = totalTurns / games;
-	alert("you won"+games+" games with an average of" +averageTurns+" turns per game!");
+	alert("you won"+game+" games with an average of" +averageTurns+" turns per game!");
 }
 function newGame() {
-	var again = prompt ("Play again? y = yes");
-    if (again == "y") return true; 
+	again = confrim("Play again?");
+	if (again == "y") return true; 
     else {
 		alert("thanks for playing.");
 		return false;
