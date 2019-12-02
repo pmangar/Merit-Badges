@@ -31,10 +31,12 @@ function gameStats(turns, totalTurns){
 	alert("you won "+games+" games with an average of " +averageTurns+" turns per game!");
 }
 function newGame(){
-	var again = prompt("Play again? y = yes");
-    if (again == "y") return true; 
-    else {
-      alert("Sorry to see you go.");
-		return false;
-	    }
+	var again = prompt("Play again? y = yes.");
+        if (again == "y") {
+                return true;
+        }
+        else {
+                alert("Sorry to see you go.");
+                return false;
+       }
 }
