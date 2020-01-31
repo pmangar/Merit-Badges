@@ -5,9 +5,9 @@ while(again == true){
 	again=confirm("Play Again?");
 }
 function main(){
-	var count = 0; var playerInput = 0; var cpuInput = 0; var winner=null;
+	var count = 0; var playerInput = 0; var cpuInput = 0; var winner=null; turn = 0;
 	while (count<21) {
-	var turn=Math.floor(Math.random()*3)+1;
+	turn=cpuTurn();
 	count+=turn;
 	alert("CPU counts "+turn+". Current count is "+count+".");
 	winner="you";
@@ -16,8 +16,8 @@ function main(){
 		count+=turn;
 		alert("Current count is "+count);
 		winner="CPU";
-		}
-		}
+	}
+}
 	
 alert("Game over. "+winner+" won!");
 }
