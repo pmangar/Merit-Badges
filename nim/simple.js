@@ -9,7 +9,7 @@ function main(){
 	while (count<21) {
 	turn=cpuTurn();
 	count+=turn;
-	alert("CPU counts "+turn+". Current count is "+count+".");
+	alert("CPU counts "+turn+". Current count is "+count);
 	winner="you";
 	if (count<21) {
 		turn = userTurn();
